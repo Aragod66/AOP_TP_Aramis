@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed435390-1cac-4664-9700-35d6d35f565a" name="Changes" comment="mejoras en el ejemplo de aop">
+    <list default="true" id="ed435390-1cac-4664-9700-35d6d35f565a" name="Changes" comment="fix readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aop/src/main/java/aop/Dirigente.java" beforeDir="false" afterPath="$PROJECT_DIR$/aop/src/main/java/aop/Dirigente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aop/src/main/java/aop/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/aop/src/main/java/aop/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aop/src/main/java/aop/Registracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/aop/src/main/java/aop/Registracion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779709453137</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix readme">
+      <option name="closed" value="true" />
+      <created>1779709639448</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779709639448</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +171,8 @@
     <MESSAGE value="adding mvnw" />
     <MESSAGE value="agrego main y otros fixes" />
     <MESSAGE value="mejoras en el ejemplo de aop" />
-    <option name="LAST_COMMIT_MESSAGE" value="mejoras en el ejemplo de aop" />
+    <MESSAGE value="fix readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix readme" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
