@@ -3,11 +3,14 @@
 Una alternativa para modularizar las incumbencias transversales (cross-cutting concerns).
 
 - **Iteración 1**: Supongamos que modelamos una clase `Jugador`, una `Dirigente` y otra `Arbitro`. Jugador entiende
-  el mensaje `insultarA(unArbitro, unInsulto)` que permite insultar a un árbitro. Dirigente entiende el mensaje `gritarA(unArbitro, palabras)`.
-- **Iteración 2**: Luego nos agregan que cuando un jugador o un dirigente insulte o grite quede persistido para generar un registro histórico.
+  el mensaje `insultarA(unArbitro, unInsulto)` que permite insultar a un árbitro. Dirigente entiende el mensaje
+  `gritarA(unArbitro, palabras)`.
+- **Iteración 2**: Luego nos agregan que cuando un jugador o un dirigente insulte o grite quede persistido para generar
+  un registro histórico.
 - **Iteración 3**: Unos meses despues nos piden agregar quien insultó, lo cual implica modificar en varios lugares.
 - Al resolver estos requerimientos si revisamos nuestra solución podemos notar que hay dos concerns independientes que
-  estamos combinando en las mismas abstracciones: el problema funcional (el iteracion1) y el problema de la registración.
+  estamos combinando en las mismas abstracciones: el problema funcional (el iteracion1) y el problema de la
+  registración.
 - Cuando diseñamos la solución, modelamos naturalmente una jerarquía de clases orientada a representar el dominio
   funcional en cuestión, en este caso el fútbol. Existen sin embargo una serie de **incumbencias transversales** (
   crosscutting concerts) a dicho modelo, como lo es el logging/registracón, que obligan a que las clases dedicadas a
@@ -23,7 +26,10 @@ Una alternativa para modularizar las incumbencias transversales (cross-cutting c
       En el ejemplo encontramos código que atañe al comportamiento funcional y código que corresponde a la
       registración del insulto. Una clase se ve impactada por razones diferentes, lo que hace más compleja el
       manteniemiento.
-- **Solución usando Decorador**: Ahora al agregar parámetros en la registración, solo cambio en un lugar. Mucho mejor!. Pero me queda la construcción del decorador como scattering. Y si necesito decorar otra jerarquia que no es PersonaDelFutbol? Ejemplo, Entrenador o Técnico que habla con su ayudante para decidir cambios. También quiero registrar lo que se dicen. No encaja `dirigirmeA(Arbitro)`... Ahora Entrenador entiende el mensaje `dialogarCon(ayudante, mensaje)`.
+- **Solución usando Decorador**: Ahora al agregar parámetros en la registración, solo cambio en un lugar. Mucho mejor!
+  .Pero me queda la construcción del decorador como scattering. Y si necesito decorar otra jerarquia que no es
+  PersonaDelFutbol? Ejemplo, tengo que registrar cuando un Arbitro le saca tarjeta a un jugador. No encaja
+  `dirigirmeA(Arbitro)`... Ahora Arbitro entiende el mensaje `sacarTarjetaA(unJugador, color)`.
 - **Solución usando AOP**:
     - Su objetivo es modularizar las incumbencias transversales en una unidad de modularización llamada **Aspecto**.
     - Suponiendo que en el aspecto defino la registración, ¿cómo le indico desde que lugar debe invocarse sin
