@@ -6,8 +6,6 @@ public class Main {
         var elDiego = new Jugador("Diego");
         elDiego.insultarA(castrilli, "lppp...");
 
-        var ayudante = new AyudanteDeCampo();
-        var entrenador = new Entrenador("Coco");
-        entrenador.dialogarCon(ayudante, "Cambiemos el 4 que tiene amarilla ...");
+        castrilli.sacarTarjetaA(elDiego, "AMARILLA");
     }
 }

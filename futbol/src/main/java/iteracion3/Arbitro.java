@@ -18,4 +18,8 @@ public class Arbitro {
     public String nombre() {
         return nombre;
     }
+
+//    public void mostrarTarjetaA(Jugador jugador, String color) {
+//
+//    }
 }

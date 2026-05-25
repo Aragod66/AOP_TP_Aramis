@@ -35,7 +35,7 @@ public class Registracion {
         System.out.println("Registrando: " + mensaje);
     }
 
-    @Around("execution(* aop..*.insultarA(..)) || execution(* aop..*.dialogarCon(..))")
+    @Around("execution(* aop..*.insultarA(..)) || execution(* aop..*.dialogarCon(..)) || execution(* aop..*.sacarTarjetaA(..))")
     public void registrarEntre(ProceedingJoinPoint joinPoint) throws Throwable {
         String mensaje = (String) joinPoint.getArgs()[1];
         System.out.println("Antes de la invocación: " + mensaje);

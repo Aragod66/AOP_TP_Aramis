@@ -15,6 +15,10 @@ public class Arbitro {
         //escucha y determina si contesta, saca amarilla, roja, etc
     }
 
+    public void sacarTarjetaA(Jugador unJugador, String color) {
+        System.out.println("El árbitro " + nombre + " saca tarjeta " + color + " a " + unJugador.nombre());
+    }
+
     public String nombre() {
         return nombre;
     }
