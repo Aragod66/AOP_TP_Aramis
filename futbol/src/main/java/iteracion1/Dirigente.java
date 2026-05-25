@@ -8,7 +8,7 @@ public class Dirigente {
     }
 
     public void gritarA(Arbitro unArbitro, String frase) {
-        unArbitro.escucharInsulto(frase);
+        unArbitro.escucharGrito(frase);
     }
 
     // supongamos que esta clase tiene otras responsabilidades
