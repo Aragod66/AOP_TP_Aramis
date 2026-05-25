@@ -58,8 +58,8 @@ Una alternativa para modularizar las incumbencias transversales (cross-cutting c
 Necesitamos compilar con maven para que aplique el weaving y luego lo ejecutamos tambien con maven desde consola:
 
 - Dentro del módulo `aop`:
-    - `mvn clean compile` y luego,
-    - `mvn exec:java`
+    - `./mvnw clean compile` y luego,
+    - `./mvnw exec:java`
 
 Fuente: Explicación obtenida de la tesis de licenciatura de Rubén Altman y Alan Cyment llamada: "SetPoint - Un enfoque
 semántico para la resolución de pointcuts".
